@@ -174,10 +174,10 @@ app.use((error, req, res, next) => {
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
-  console.log(`📡 API available at: http://localhost:${PORT}`);
-  console.log(`🔗 Main endpoint: http://localhost:${PORT}/bfhl`);
-  console.log(`📊 Health check: http://localhost:${PORT}/health`);
+  console.log(`Server running on port ${PORT}`);
+  console.log(`API available at: http://localhost:${PORT}`);
+  console.log(`Main endpoint: http://localhost:${PORT}/bfhl`);
+  console.log(`Health check: http://localhost:${PORT}/health`);
 });
 
 module.exports = app;

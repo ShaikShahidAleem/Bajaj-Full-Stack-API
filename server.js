@@ -22,10 +22,10 @@ app.use(limiter);
 
 // User information (you can modify these)
 const USER_INFO = {
-  fullName: "john_doe",
-  email: "john@xyz.com",
-  rollNumber: "ABCD123",
-  birthDate: "17091999" // DDMMYYYY format
+  fullName: "ShaikShahidAleem",
+  email: "shahidaleem070@gmail.com",
+  rollNumber: "22BCE3426",
+  birthDate: "07062003" // DDMMYYYY format
 };
 
 // Array processing logic

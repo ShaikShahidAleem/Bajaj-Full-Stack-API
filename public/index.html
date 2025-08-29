@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bajaj Full Stack API - Array Processor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Bajaj Full Stack API</h1>
+            <p>Array Processing Service - Test Interface</p>
+        </div>
+
+        <div class="content">
+            <div class="form-section">
+                <h2>Test the API</h2>
+                <p>Enter comma-separated values to process through the API:</p>
+                
+                <div class="form-group">
+                    <label for="inputData">Input Data (comma-separated):</label>
+                    <input type="text" id="inputData" placeholder="e.g., a,1,334,4,R,$" value="a,1,334,4,R,$">
+                </div>
+
+                <div class="form-group">
+                    <label for="apiUrl">API URL:</label>
+                    <input type="text" id="apiUrl" placeholder="http://localhost:3000/bfhl" value="http://localhost:3000/bfhl">
+                </div>
+
+                <button class="btn" id="processBtn">Process Array</button>
+            </div>
+
+            <div id="result" class="result-section" style="display: none;">
+                <h2>Results</h2>
+                <div id="resultContent"></div>
+            </div>
+
+            <div class="examples">
+                <h3>Example Inputs</h3>
+                
+                <div class="example-item">
+                    <strong>Example A:</strong> a,1,334,4,R,$
+                    <br><small>Expected: 1 odd, 334,4 even, A,R alphabets, $ special, sum 339</small>
+                </div>
+
+                <div class="example-item">
+                    <strong>Example B:</strong> 2,a,y,4,&,-,*,5,92,b
+                    <br><small>Expected: 5 odd, 2,4,92 even, A,Y,B alphabets, &,-,* special, sum 103</small>
+                </div>
+
+                <div class="example-item">
+                    <strong>Example C:</strong> A,ABcD,DOE
+                    <br><small>Expected: No numbers, A,ABCD,DOE alphabets, no special chars, sum 0</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

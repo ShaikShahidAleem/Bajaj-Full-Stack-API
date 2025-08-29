@@ -90,24 +90,24 @@ function processArray(data) {
 }
 
 // Routes
-// app.get('/', (req, res) => {
-//   res.json({
-//     message: 'Bajaj Full Stack API',
-//     version: '1.0.0',
-//     endpoints: {
-//       'POST /bfhl': 'Process array data',
-//       'GET /': 'API information'
-//     },
-//     user_info: {
-//       user_id: `${USER_INFO.fullName}_${USER_INFO.birthDate}`,
-//       email: USER_INFO.email,
-//       roll_number: USER_INFO.rollNumber
-//     }
-//   });
-// });
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.json({
+    message: 'Bajaj Full Stack API',
+    version: '1.0.0',
+    endpoints: {
+      'POST /bfhl': 'Process array data',
+      'GET /': 'API information'
+    },
+    user_info: {
+      user_id: `${USER_INFO.fullName}_${USER_INFO.birthDate}`,
+      email: USER_INFO.email,
+      roll_number: USER_INFO.rollNumber
+    }
+  });
 });
+// app.get('/', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'public', 'index.html'));
+// });
 
 app.post('/bfhl', (req, res) => {
   try {
